@@ -21,4 +21,11 @@ public class OutsourceEmployee extends Employee {
 	public Double payment() {
 		return (hours * valuePerHour * 110)/100;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(name+" $"+payment());
+		return sb.toString();
+	}
 }
